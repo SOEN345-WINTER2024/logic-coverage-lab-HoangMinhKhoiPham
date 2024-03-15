@@ -1,4 +1,4 @@
-![image](https://github.com/SOEN345-WINTER2024/logic-coverage-lab-HoangMinhKhoiPham/assets/97756628/f39ceb11-c5ea-4c4f-9ecb-386104c32377)# Hoang Minh Khoi Pham - 40162551
+# Hoang Minh Khoi Pham - 40162551
 
 Step 1: Logic Expression - (a || (b && c)
 
@@ -26,11 +26,11 @@ JUnit Predicate Coverage
 public class PredicateCoverageTest {
     @Test
     public void testTTT() {
-        assertTrue(evaluateExpression(true, true, true));
+        assertTrue(checkIt(true, true, true));
     }
     @Test
     public void testFFF() {
-        assertFalse(evaluateExpression(false, false, false));
+        assertFalse(checkIt(false, false, false));
     }
 }
 ```
@@ -40,11 +40,11 @@ Junit Coverage:
 public class ClauseCoverageTest {
     @Test
     public void testAllTrue() {
-        assertTrue(evaluateExpression(true, true, true));
+        assertTrue(checkIt(true, true, true));
     }
     @Test
     public void testAFalse() {
-        assertFalse(evaluateExpression(false, true, true));
+        assertFalse(checkIt(false, true, true));
     }
 }
 ```
@@ -56,64 +56,64 @@ public class RACCTest {
     // Test case for pair (1, 5)
     @Test
     public void testPair1() {
-        assertTrue(evaluateExpression(true, true, true));  // Decision 1 is true
-        assertFalse(evaluateExpression(true, false, true)); // Decision 5 is false
+        assertTrue(checkIt(true, true, true));  // Decision 1 is true
+        assertFalse(checkIt(true, false, true)); // Decision 5 is false
     }
 
     // Test case for pair (1, 6)
     @Test
     public void testPair2() {
-        assertTrue(evaluateExpression(true, true, true));  // Decision 1 is true
-        assertFalse(evaluateExpression(false, true, true)); // Decision 6 is false
+        assertTrue(checkIt(true, true, true));  // Decision 1 is true
+        assertFalse(checkIt(false, true, true)); // Decision 6 is false
     }
 
     // Test case for pair (1, 7)
     @Test
     public void testPair3() {
-        assertTrue(evaluateExpression(true, true, true));  // Decision 1 is true
-        assertFalse(evaluateExpression(false, false, true)); // Decision 7 is false
+        assertTrue(checkIt(true, true, true));  // Decision 1 is true
+        assertFalse(checkIt(false, false, true)); // Decision 7 is false
     }
 
     // Test case for pair (2, 5)
     @Test
     public void testPair4() {
-        assertTrue(evaluateExpression(true, true, false));  // Decision 2 is true
-        assertFalse(evaluateExpression(true, false, true)); // Decision 5 is false
+        assertTrue(checkIt(true, true, false));  // Decision 2 is true
+        assertFalse(checkIt(true, false, true)); // Decision 5 is false
     }
 
     // Test case for pair (2, 6)
     @Test
     public void testPair5() {
-        assertTrue(evaluateExpression(true, true, false));  // Decision 2 is true
-        assertFalse(evaluateExpression(false, true, true)); // Decision 6 is false
+        assertTrue(checkIt(true, true, false));  // Decision 2 is true
+        assertFalse(checkIt(false, true, true)); // Decision 6 is false
     }
 
     // Test case for pair (2, 7)
     @Test
     public void testPair6() {
-        assertTrue(evaluateExpression(true, true, false));  // Decision 2 is true
-        assertFalse(evaluateExpression(false, false, true)); // Decision 7 is false
+        assertTrue(checkIt(true, true, false));  // Decision 2 is true
+        assertFalse(checkIt(false, false, true)); // Decision 7 is false
     }
 
     // Test case for pair (3, 5)
     @Test
     public void testPair7() {
-        assertTrue(evaluateExpression(true, false, true));  // Decision 3 is true
-        assertFalse(evaluateExpression(true, false, true)); // Decision 5 is false
+        assertTrue(checkIt(true, false, true));  // Decision 3 is true
+        assertFalse(checkIt(true, false, true)); // Decision 5 is false
     }
 
     // Test case for pair (3, 6)
     @Test
     public void testPair8() {
-        assertTrue(evaluateExpression(true, false, true));  // Decision 3 is true
-        assertFalse(evaluateExpression(false, true, true)); // Decision 6 is false
+        assertTrue(checkIt(true, false, true));  // Decision 3 is true
+        assertFalse(checkIt(false, true, true)); // Decision 6 is false
     }
 
     // Test case for pair (3, 7)
     @Test
     public void testPair9() {
-        assertTrue(evaluateExpression(true, false, true));  // Decision 3 is true
-        assertFalse(evaluateExpression(false, false, true)); // Decision 7 is false
+        assertTrue(checkIt(true, false, true));  // Decision 3 is true
+        assertFalse(checkIt(false, false, true)); // Decision 7 is false
     }
 }
 ```
@@ -123,18 +123,18 @@ public class RACCTest {
 // Test cases for the pairs (1, 5), (1, 6), (1, 7)
     @Test
     public void testPair1() {
-        assertTrue(evaluateExpression(true, true, true));
-        assertFalse(evaluateExpression(true, false, true)); 
+        assertTrue(checkIt(true, true, true));
+        assertFalse(checkIt(true, false, true)); 
     }
     @Test
     public void testPair2() {
-        assertTrue(evaluateExpression(true, true, false));
-        assertFalse(evaluateExpression(false, true, false));
+        assertTrue(checkIt(true, true, false));
+        assertFalse(checkIt(false, true, false));
     }
     @Test
     public void testPair3() {
-        assertTrue(evaluateExpression(true, false, true));
-        assertFalse(evaluateExpression(false, false, true));
+        assertTrue(checkIt(true, false, true));
+        assertFalse(checkIt(false, false, true));
     }
 }
 ```
